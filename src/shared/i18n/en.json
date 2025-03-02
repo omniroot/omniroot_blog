@@ -1,3 +1,21 @@
 {
-  "welcome": "Welcome"
+  "welcome": "Welcome",
+  "title": "Omniroot blog",
+
+  "home": "Home",
+  "projects": "Projects",
+  "posts": "Posts",
+  "about": "About",
+  "iam": "I`m",
+  "iam_content": "18 yo Russia Technology Enthusiast with a focus on frontend development",
+  "experience": "Experience",
+  "experience_content_1": "2 years of non-commercial development using React",
+  "experience_content_2": "3 years of using Arch Linux as my main operating system",
+  "experience_content_3": "7 years of experience with Android, including custom ROMs, Magisk, and LSPosed",
+  "background": "Background",
+  "background_content": " Started programming by creating cheats and scripts for Android games; explored cybersecurity and Android development.",
+  "interests": "Interests",
+  "interests_content": "I am passionate about a healthy lifestyle, sports, and Magisk, and LSPosed",
+  "careerGoal": "Career Goal",
+  "careerGoal_content": "Aspiring to become a senior frontend React developer while continuing to pursue my hobbies."
 }
