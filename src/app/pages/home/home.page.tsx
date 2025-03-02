@@ -6,7 +6,7 @@ interface IProps {
 }
 
 export const HomePage: FC<IProps> = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return <>{t("welcome")}</>;
 };

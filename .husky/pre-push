@@ -1,6 +1,5 @@
-#!/usr/bin/env sh
-. "$(dirname "$0")/h"
-
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
 
 # Выполняем линтинг
 if ! bun run lint; then
