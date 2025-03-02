@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 import styles from "./Header.module.css";
 
 export const Header = () => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { theme, toggleTheme } = useTheme();
   const indicatorRef = useRef<HTMLDivElement>(null);
   const path = useLocation().pathname;
@@ -51,6 +51,9 @@ export const Header = () => {
 
   const onToggleLanguageClick = () => {
     i18n.changeLanguage(i18n.language === "en" ? "ru" : "en");
+    setTimeout(() => {
+      drawIndicator();
+    }, 1);
   };
 
   return (
@@ -60,7 +63,7 @@ export const Header = () => {
       className={styles.header}
     >
       <div className={styles.left}>
-        <span className={styles.title}>Omniroot blog</span>
+        <span className={styles.title}>{t("title")}</span>
       </div>
       <div className={styles.center}>
         <nav className={styles.nav}>
@@ -73,22 +76,22 @@ export const Header = () => {
           />
           <NavItem>
             <Link to="/" activeProps={{ id: "active-link" }}>
-              Home
+              {t("home")}
             </Link>
           </NavItem>
           <NavItem>
             <Link to="/projects" activeProps={{ id: "active-link" }}>
-              Projects
+              {t("projects")}
             </Link>
           </NavItem>
           <NavItem>
             <Link to="/posts" activeProps={{ id: "active-link" }}>
-              Posts
+              {t("posts")}
             </Link>
           </NavItem>
           <NavItem>
             <Link to="/about" activeProps={{ id: "active-link" }}>
-              About
+              {t("about")}
             </Link>
           </NavItem>
         </nav>
