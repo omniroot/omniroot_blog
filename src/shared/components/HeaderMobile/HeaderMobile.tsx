@@ -1,15 +1,15 @@
 import { MoonIcon } from "@/shared/icons/moon-icon.tsx";
 import { SunIcon } from "@/shared/icons/sun-icon.tsx";
+import { useLanguage } from "@/shared/stores/language.store.tsx";
 import { useTheme } from "@/shared/stores/theme.store.tsx";
 import { NavItem } from "@/shared/ui/NavItem/NavItem.tsx";
 import { Link, useLocation } from "@tanstack/react-router";
 import { motion } from "motion/react";
 import { useEffect, useRef } from "react";
-import { useTranslation } from "react-i18next";
 import styles from "./HeaderMobile.module.css";
 
 export const HeaderMobile = () => {
-  const { i18n } = useTranslation();
+  const { t, i18n, toggleLanguage } = useLanguage();
   const { theme, toggleTheme } = useTheme();
   const indicatorRef = useRef<HTMLDivElement>(null);
   const path = useLocation().pathname;
@@ -50,7 +50,10 @@ export const HeaderMobile = () => {
   }, []);
 
   const onToggleLanguageClick = () => {
-    i18n.changeLanguage(i18n.language === "en" ? "ru" : "en");
+    toggleLanguage();
+    setTimeout(() => {
+      drawIndicator();
+    });
   };
 
   return (
@@ -60,7 +63,7 @@ export const HeaderMobile = () => {
       className={styles.header}
     >
       <div className={styles.top}>
-        <span className={styles.title}>Omniroot blog</span>
+        <span className={styles.title}>{t("title")}</span>
         <div className={styles.actions}>
           <motion.button
             className={styles.language_toggle_button}
@@ -97,22 +100,22 @@ export const HeaderMobile = () => {
           />
           <NavItem>
             <Link to="/" activeProps={{ id: "active-link" }}>
-              Home
+              {t("home")}
             </Link>
           </NavItem>
           <NavItem>
             <Link to="/projects" activeProps={{ id: "active-link" }}>
-              Projects
+              {t("projects")}
             </Link>
           </NavItem>
           <NavItem>
             <Link to="/posts" activeProps={{ id: "active-link" }}>
-              Posts
+              {t("posts")}
             </Link>
           </NavItem>
           <NavItem>
             <Link to="/about" activeProps={{ id: "active-link" }}>
-              About
+              {t("about")}
             </Link>
           </NavItem>
         </nav>
