@@ -17,5 +17,8 @@
   "interests": "Interests",
   "interests_content": "I am passionate about a healthy lifestyle, sports, and Magisk, and LSPosed",
   "careerGoal": "Career Goal",
-  "careerGoal_content": "Aspiring to become a senior frontend React developer while continuing to pursue my hobbies."
+  "careerGoal_content": "Aspiring to become a senior frontend React developer while continuing to pursue my hobbies.",
+
+  "home_page_hint_1": "You can check my projects",
+  "home_page_hint_2": "here"
 }
