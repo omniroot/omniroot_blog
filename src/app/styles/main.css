@@ -14,7 +14,9 @@ body {
 
   scrollbar-width: thin;
   scrollbar-color: var(--color-primary) var(--color-background);
-  transition: color 200ms, background-color 200ms;
+  transition:
+    color 200ms,
+    background-color 200ms;
   overflow-x: hidden;
 }
 

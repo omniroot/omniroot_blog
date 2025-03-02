@@ -8,7 +8,7 @@ i18n
   .use(Backend) // используем бэкенд для загрузки переводов
   .use(initReactI18next)
   .init({
-    lng: "en", // язык по умолчанию
+    lng: localStorage.getItem("language"),
     fallbackLng: "en", // язык по умолчанию, если перевод не найден
     resources: {
       en: {

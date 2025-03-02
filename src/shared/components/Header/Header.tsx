@@ -1,15 +1,15 @@
 import { MoonIcon } from "@/shared/icons/moon-icon.tsx";
 import { SunIcon } from "@/shared/icons/sun-icon.tsx";
+import { useLanguage } from "@/shared/stores/language.store.tsx";
 import { useTheme } from "@/shared/stores/theme.store.tsx";
 import { NavItem } from "@/shared/ui/NavItem/NavItem.tsx";
 import { Link, useLocation } from "@tanstack/react-router";
 import { motion } from "motion/react";
 import { useEffect, useRef } from "react";
-import { useTranslation } from "react-i18next";
 import styles from "./Header.module.css";
 
 export const Header = () => {
-  const { t, i18n } = useTranslation();
+  const { i18n, t, toggleLanguage } = useLanguage();
   const { theme, toggleTheme } = useTheme();
   const indicatorRef = useRef<HTMLDivElement>(null);
   const path = useLocation().pathname;
@@ -50,7 +50,7 @@ export const Header = () => {
   }, []);
 
   const onToggleLanguageClick = () => {
-    i18n.changeLanguage(i18n.language === "en" ? "ru" : "en");
+    toggleLanguage();
     setTimeout(() => {
       drawIndicator();
     }, 1);

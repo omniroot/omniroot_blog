@@ -8,5 +8,5 @@ import "@/shared/i18n/i18n.js";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>
+  </StrictMode>,
 );

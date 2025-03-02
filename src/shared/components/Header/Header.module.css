@@ -19,7 +19,9 @@
       .indicator {
         display: flex;
         position: absolute;
-        transition: width 200ms, height 200ms;
+        transition:
+          width 200ms,
+          height 200ms;
 
         background-color: var(--color-secondary);
         border-radius: 8px;
@@ -27,7 +29,9 @@
 
       & > *:not(.indicator) {
         z-index: 0;
-        transition: width 200ms, height 200ms;
+        transition:
+          width 200ms,
+          height 200ms;
       }
     }
   }
