@@ -1,14 +1,20 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-# Выполняем линтинг
+# Проверяем линтинг
 if ! bun run lint; then
   echo "Linting failed. Please fix the issues before pushing." >&2
   exit 1
 fi
 
-# Выполняем форматирование
+# Проверяем форматирование
 if ! bun run format; then
   echo "Formatting failed. Please fix the issues before pushing." >&2
+  exit 1
+fi
+
+# Проверяем сборку
+if ! bun run build; then
+  echo "Build failed. Please fix the issues before pushing." >&2
   exit 1
 fi
