@@ -1,0 +1,20 @@
+html[data-theme="light"] {
+  --color-number: 10;
+  --color-primary: hsl(0, 75%, 55%);
+  --color-secondary: hsl(0, 5%, 11%);
+  --color-ternary: hsl(0, 6%, 14%);
+  --color-background: hsl(0, 14%, 93%);
+  --color-background-80: hsla(0, 0%, 7%, 80%);
+
+  --color-text: hsl(0, 0%, 10%);
+  --color-text-2: hsl(0, 5%, 55%);
+  --color-text-3: hsl(0, 1%, 28%);
+
+  --color-telegram: hsl(201, 75%, 54%);
+  --color-gmail: hsl(5, 81%, 56%);
+
+  --color-selection-text: hsl(var(--color-number), 88%, 68%);
+  --color-selection-background: hsl(var(--color-number), 14%, 20%);
+
+  --color-red: hsl(0, 73%, 54%);
+}

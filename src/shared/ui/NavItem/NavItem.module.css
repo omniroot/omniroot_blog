@@ -1,0 +1,24 @@
+.navitem {
+  display: flex;
+
+  & > * {
+    padding: 12px 24px;
+    color: var(--color-text-2);
+    text-decoration: none;
+    transition: color 200ms;
+    font-family: inherit;
+  }
+
+  & > *[data-status="active"] {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navitem {
+    & > * {
+      padding: 8px 20px;
+    }
+  }
+}

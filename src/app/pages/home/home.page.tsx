@@ -1,10 +1,11 @@
-import { ReactNode, FC } from "react";
-import styles from "./home.page.module.css";
+import { FC, ReactNode } from "react";
+import { useTranslation } from "react-i18next";
 
 interface IProps {
   children?: ReactNode;
 }
 
 export const HomePage: FC<IProps> = () => {
-  return <div className={styles.page}>Home page</div>;
+  const { t } = useTranslation();
+  return <>{t("welcome")}</>;
 };
