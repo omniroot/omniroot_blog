@@ -3,4 +3,15 @@
   flex-direction: column;
   gap: 4px;
   font-size: var(--text-size-medium);
+
+  .title {
+    font-size: 21px;
+    color: var(--color-primary);
+  }
+
+  .body {
+    font-size: 18px;
+    margin-bottom: 8px;
+    margin-left: 15px;
+  }
 }
