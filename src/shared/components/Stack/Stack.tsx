@@ -1,6 +1,5 @@
 import { FC } from "react";
 import styles from "./Stack.module.css";
-import { title } from "process";
 interface IProps {
   title?: string;
   description?: string;
@@ -9,7 +8,7 @@ interface IProps {
 export const Stack: FC<IProps> = ({
   title,
   description,
-  variant = "default",
+  // variant = "default",
 }) => {
   return (
     <div className={styles.stack}>
