@@ -1,0 +1,20 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  border: 2px solid var(--color-secondary);
+  padding: 24px;
+  border-radius: 24px;
+
+  .title {
+    color: var(--color-text-2);
+    font-size: var(--text-size-large);
+    font-weight: bold;
+  }
+
+  .description {
+    font-size: var(--text-size-medium);
+    font-weight: bold;
+  }
+}
