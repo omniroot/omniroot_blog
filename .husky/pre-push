@@ -1,3 +1,15 @@
+#!/usr/bin/env sh
+. "$(dirname "$0")/h"
 
 
-bun run lint
+# Выполняем линтинг
+if ! bun run lint; then
+  echo "Linting failed. Please fix the issues before pushing." >&2
+  exit 1
+fi
+
+# Выполняем форматирование
+if ! bun run format; then
+  echo "Formatting failed. Please fix the issues before pushing." >&2
+  exit 1
+fi
