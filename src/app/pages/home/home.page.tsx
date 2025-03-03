@@ -61,7 +61,7 @@ export const HomePage: FC<IProps> = () => {
           title="Core / JS"
           description="Javascript / Typescript / Webpack / Vite"
         />
-        <Stack title="UI" description="React / MUI" />
+        <Stack title="UI" description="React" />
 
         <Stack title="Styles" description="CSS / SCSS / POSTCSS" />
 
@@ -69,7 +69,10 @@ export const HomePage: FC<IProps> = () => {
           title="Tools"
           description="React Query / React Router / Tanstack Stack / i18N / Redux Toolkit / Zustand / Jotai"
         />
-        <Stack title="Learn (but hate) it" description="NEXTJS / TAILWIND" />
+        <Stack
+          title="Learn (but hate) it"
+          description="NEXTJS / TAILWIND / MUI"
+        />
       </div>
     </div>
   );
