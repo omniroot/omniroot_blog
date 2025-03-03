@@ -58,8 +58,9 @@ export const Header = () => {
 
   return (
     <motion.div
-      initial={{ y: -20, scale: 0.8 }}
-      animate={{ y: 0, scale: 1 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
       className={styles.header}
     >
       <div className={styles.left}>
