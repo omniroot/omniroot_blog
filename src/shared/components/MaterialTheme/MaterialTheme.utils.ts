@@ -121,7 +121,7 @@ export function applyMaterialTheme(
   options: { type: "light" | "dark"; element?: HTMLElement } = {
     type: "light",
     element: document.body,
-  }
+  },
 ): void {
   const { type, element = document.body } = options;
   const baseScheme = type === "light" ? scheme.light : scheme.dark;

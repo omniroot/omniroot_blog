@@ -28,7 +28,7 @@ const MaterialThemeContext = createContext<
       changeColor: (color: string) => void;
       getVar: (
         name: string | undefined,
-        type?: "background" | "color"
+        type?: "background" | "color",
       ) => string | undefined;
     }
   | undefined
@@ -58,7 +58,7 @@ export const MaterialThemeProvider = ({
       console.log("Apply theme: ", color);
     } else {
       console.error(
-        "Недопустимый HEX-цвет. Используйте формат #RRGGBB или #RGB, используется цвет по умолчанию или #ee715a"
+        "Недопустимый HEX-цвет. Используйте формат #RRGGBB или #RGB, используется цвет по умолчанию или #ee715a",
       );
       setColor(defaultColor || "#ee715a");
     }
@@ -66,7 +66,7 @@ export const MaterialThemeProvider = ({
 
   const getVar = (
     name: IUIColor | string | undefined,
-    type: "background" | "color" = "color"
+    type: "background" | "color" = "color",
   ) => {
     if (!name) return;
     const convertedName = name.toLocaleLowerCase().replaceAll("_", "-");
@@ -86,7 +86,7 @@ export const useMaterialTheme = () => {
   const context = useContext(MaterialThemeContext);
   if (!context) {
     throw new Error(
-      "useMaterialTheme must be used within a MaterialThemeProvider"
+      "useMaterialTheme must be used within a MaterialThemeProvider",
     );
   }
   return context;
