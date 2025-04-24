@@ -23,7 +23,7 @@
           width 200ms,
           height 200ms;
 
-        background-color: var(--color-secondary);
+        background-color: var(--md-primary);
         border-radius: 8px;
       }
 

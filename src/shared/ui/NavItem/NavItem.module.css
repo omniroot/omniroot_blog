@@ -3,14 +3,14 @@
 
   & > * {
     padding: 12px 24px;
-    color: var(--color-text-2);
+    color: var(--md-on-surface);
     text-decoration: none;
     transition: color 200ms;
     font-family: inherit;
   }
 
   & > *[data-status="active"] {
-    color: var(--color-text);
+    color: var(--md-on-primary);
     text-decoration: none;
   }
 }

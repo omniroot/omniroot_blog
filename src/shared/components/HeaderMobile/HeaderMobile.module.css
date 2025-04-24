@@ -61,8 +61,8 @@
       .indicator {
         position: absolute;
         /* transition: left 200ms, width 200ms, height 200ms; */
-
-        background-color: var(--color-secondary);
+        color: var(--md-on-primary);
+        background-color: var(--md-primary);
         border-radius: 8px;
       }
 

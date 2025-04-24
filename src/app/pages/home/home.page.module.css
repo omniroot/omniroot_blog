@@ -61,11 +61,11 @@
       display: flex;
       align-items: center;
       gap: 4px;
-      color: var(--color-text-2);
+      color: var(--md-surface-variant);
       font-size: var(--text-size-medium);
 
       .hint_link {
-        color: var(--color-primary);
+        color: var(--md-primary);
         text-decoration: none;
       }
     }

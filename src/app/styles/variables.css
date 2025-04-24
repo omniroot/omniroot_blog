@@ -1,5 +1,8 @@
 :root {
   /* Brand colors */
+  --color-github: hsl(240, 2%, 11%);
+  --color-telegram: hsl(201, 75%, 54%);
+  --color-gmail: hsl(5, 81%, 56%);
 
   /* Text size */
   --text-size-mini: 0.675rem;

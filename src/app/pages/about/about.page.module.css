@@ -6,7 +6,7 @@
 
   .title {
     font-size: 21px;
-    color: var(--color-primary);
+    color: var(--md-primary);
   }
 
   .body {
